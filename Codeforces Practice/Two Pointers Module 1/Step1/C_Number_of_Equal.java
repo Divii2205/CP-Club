@@ -6,18 +6,19 @@ public class C_Number_of_Equal {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        int[] arrA = new int[a];
-        int[] arrB = new int[b];
+        long[] arrA = new long[a];
+        long[] arrB = new long[b];
 
-        for(int i = 0; i<a; i++) arrA[i] = sc.nextInt();
-        for(int i = 0; i<b; i++) arrB[i] = sc.nextInt();
+        for(int i = 0; i<a; i++) arrA[i] = sc.nextLong();
+        for(int i = 0; i<b; i++) arrB[i] = sc.nextLong();
         
-        int x = 0, y = 0, count = 0;
+        int x = 0, y = 0;
+        long count = 0;
 
         while (x<a && y<b) {
             
             if(arrA[x] == arrB[y]){
-                int countA = 1, countB = 1;
+                long countA = 1, countB = 1;
 
                 while (x + 1 < a && arrA[x] == arrA[x + 1]){
                     x++; countA++;
